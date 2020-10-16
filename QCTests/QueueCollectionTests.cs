@@ -7,7 +7,7 @@ namespace QCTests
     public class QueueCollectionTests
     {
         [Fact]
-        public void Queue_Peek_ReturnTrue()
+        public void Peek_ReturnTrue()
         {
             // Arrange
             var queue = new Queue<int> {1, 2, 3, 4, 5, 6};
@@ -17,7 +17,7 @@ namespace QCTests
         }
 
         [Fact]
-        public void Queue_Last_ReturnTrue()
+        public void Last_ReturnTrue()
         {
             // Arrange
             var queue = new Queue<int> {1, 2, 3, 4, 5, 6};
@@ -27,7 +27,7 @@ namespace QCTests
         }
 
         [Fact]
-        public void Queue_Peek_Last_ReturnException()
+        public void Peek_Last_EmptyQueue_ReturnException()
         {
             //Arrange
             var queue = new Queue<int>();
@@ -38,7 +38,7 @@ namespace QCTests
         }
 
         [Fact]
-        public void Queue_IsEmpty_ReturnTrue()
+        public void IsEmpty_ReturnTrue()
         {
             // Arrange
             var queue = new Queue<int>();
@@ -48,7 +48,7 @@ namespace QCTests
         }
 
         [Fact]
-        public void Queue_IsNot_Empty_ReturnFalse()
+        public void IsEmpty_ReturnFalse()
         {
             // Arrange
             var queue = new Queue<int> {1, 2, 3, 4, 5, 6};
@@ -58,7 +58,7 @@ namespace QCTests
         }
 
         [Fact]
-        public void Queue_Clear_ReturnTrue()
+        public void Clear_ReturnTrue()
         {
             // Arrange
             var queue = new Queue<int> {1, 2, 3, 4, 5, 6};
@@ -71,7 +71,7 @@ namespace QCTests
         [Theory]
         [InlineData(1)]
         [InlineData(3)]
-        public void Queue_Contains_ReturnTrue(int value)
+        public void Contains_ReturnTrue(int value)
         {
             // Arrange
             var queue = new Queue<int> {1, 2, 3, 4, 5, 6};
@@ -83,7 +83,7 @@ namespace QCTests
         [Theory]
         [InlineData(-1)]
         [InlineData(15)]
-        public void Queue_Contains_ReturnFalse(int value)
+        public void Contains_ReturnFalse(int value)
         {
             // Arrange
             var queue = new Queue<int> {1, 2, 3, 4, 5, 6};
@@ -95,7 +95,7 @@ namespace QCTests
         [Theory]
         [InlineData(7)]
         [InlineData(-14)]
-        public void Queue_Enqueue_Value_ReturnTrue(int value)
+        public void Enqueue_Value_ReturnTrue(int value)
         {
             // Arrange
             var queue = new Queue<int> {1, 2, 3, 4, 5, 6};
@@ -106,7 +106,7 @@ namespace QCTests
         }
 
         [Fact]
-        public void Queue_Dequeue_ReturnTrue()
+        public void Dequeue_ReturnTrue()
         {
             // Arrange
             var queue = new Queue<int> {1, 2, 3, 4, 5, 6};
@@ -118,7 +118,7 @@ namespace QCTests
         }
 
         [Fact]
-        public void Queue_Dequeue_ReturnException()
+        public void Dequeue_ReturnException()
         {
             //Arrange
             var queue = new Queue<int>();
@@ -162,7 +162,7 @@ namespace QCTests
         }
 
         [Fact]
-        public void Queue_CopyTo_ReturnTrue()
+        public void CopyTo_ReturnTrue()
         {
             // Arrange
             var queue = new Queue<int> {-10, 10};
@@ -177,7 +177,7 @@ namespace QCTests
         }
 
         [Fact]
-        public void Queue_CopyTo_ReturnException()
+        public void CopyTo_ReturnException()
         {
             // Arrange
             var queue = new Queue<int> {-10, 10, 200};
@@ -188,7 +188,7 @@ namespace QCTests
         }
 
         [Fact]
-        public void Queue_Clone_ReturnTrue()
+        public void Clone_ReturnTrue()
         {
             // Arrange
             var queue = new Queue<int> {1, 2, 3, 4, 5, 6};
